@@ -1,0 +1,22 @@
+De SQL statements waarmee we de database kunnen raadplegen worden het meest gebruikt en de eenvoudige structuur van een raadpleeg statement is:
+
+SELECT <kolomnaam<, <kolomnaam>, ....
+FROM <tabelnaam>
+WHERE <vergelijking>
+
+Een vergelijking lijkt op JavaSctipt vergelijkingen, een paar voorbeelden:
+
+https://www.roc.ovh/link/176#bkmrk-where-naam-%3D-%27nether
+ 
+WHERE naam = 'Netherlands'	kolom naam moet 'Netherlands'bevatten.
+WHERE leeftijd > 18	
+kolom leeftijd moet groter dan 18 zijn (dus 19,20,21,....)
+
+WHERE prijs < 4.99	kolom prijs is kleiner dan 4.99
+WHERE prijs > 5 and prijs <10	kolom prijs is groter dan 5 en kleiner dan 10, en ligt dus tussen 5 en 10 in.
+WHERE prijs >=5 and prijs <=10	kolom prijs is minimaal 5 en maximaal 10
+WHERE continent='Europe' or continent='Africa'	kolom continent is Europe of Africa
+WHERE naam like 'Ned%'	kolom naam begint met een Ned (% betekent any characters)
+WHERE naam like '%n%'	kolom naam bevat een n
+WHERE naam like '%e'	kolom naam eindigt op een e
+WHERE naam like 'A%' or naam like 'B%'	kolom naam begint met een A of met een B

@@ -1,0 +1,46 @@
+In de select kunnen we ook alleen het aantal rijen dat we terugkrijgen tellen. Stel we willen weten hoeveel lander er in de tabel Country staan dan kan met de volgende SQL Query.
+
+1
+SELECT count(*)
+2
+FROM Country
+Als je alle kolommen wilt afdrukken dan kun je ook alleen * gebruiken:
+
+1
+SELECT *
+2
+FROM Country
+Probeer nu zelf:
+
+1
+SELECT count(*)
+2
+FROM country
+3
+WHERE name like 'F%'
+en
+1
+SELECT *
+2
+FROM country
+3
+WHERE name like 'F%'
+Zie je wat het verschil is?
+
+Als je een SELECT count(*) gebruikt dan wil je dus een aantal weten. Je krijgt dan alleen een getal. Bijvoorbeeld alle leerlingen die een voldoende hebben gehaald. 
+
+1
+SELECT count(*)
+2
+FROM leerlingen
+3
+WHERE cijfer >= 5.5
+De uitkomst van deze query is bijvoorbeeld 10. Er zijn in dat geval 10 leerlingen die een 5.5 of hoger hebben gehaald. Na de count(*) kan je geen andere kolommen namen meer opvragen.
+
+SELECT count(*), name (is FOUT!)
+
+Kan dus niet want je kan niet alleen het aantal van iets afdrukken en dan de name ook nog afdrukken. Je wilt of de name zien of alleen het aantal.
+
+https://www.roc.ovh/link/177#bkmrk-count%28%2A%29-staat-altij
+ 
+count(*) staat altijd alleen en eenzaam na de SELECT.

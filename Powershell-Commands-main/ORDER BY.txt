@@ -1,0 +1,17 @@
+Als laatste regel in een query kunnen we aangeven dat de regels die een query teruggeeft worden gesorteerd. Dat gaat als volgt:
+
+ORDER BY <kolomnaam> ASC
+Dit sorteert op de kolomnaam <kolomnaam> in oplopende volgorde, dus van laag naar hoog.
+
+ORDER BY <kolomnaam> DESC
+Dit sorteert op de kolomnaam <kolomnaam> in aflopende volgorde, dus van hoog naar laag.
+
+Voorbeeld:
+
+SELECT Name, Population
+FROM country
+ORDER BY Population DESC
+
+https://www.roc.ovh/link/248#bkmrk-deze-query-drukt-all
+ 
+Deze query drukt alle landen af gesorteerd op inwoneraantal (population) van hoog naar laag.

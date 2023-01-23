@@ -1,0 +1,26 @@
+Add a prompt to clear a list by adding a new variable and then using an if statement to check the user input.
+
+$answer = Read-Host -Prompt "Clear the list (y/n)?";
+
+While (($answer -ne "y") -And ($answer -ne "n")) {
+
+$answer = Read-Host -Prompt "Invalid input, please enter y or n";
+
+}
+
+If ($answer -Eq 'y') {
+
+Set-Content -path $ListFile -value $null;
+
+}
+
+
+Dit script gebruikt de PowerShell-cmdlets Read-Host, While en If om interactie te hebben met de gebruiker en een lijst te leegmaken.
+
+De eerste regel vraagt de gebruiker om invoer voor de vraag of de lijst gewist moet worden. De Read-Host cmdlet wordt gebruikt om de gebruiker om invoer te vragen, en de -Prompt parameter wordt gebruikt om de tekst "Clear the list (y/n)?" weer te geven als de prompt voor de gebruiker. De gebruiker ingevoerde waarde wordt opgeslagen in de variabele $answer.
+
+De While-loop controleert of de invoer van de gebruiker niet gelijk is aan "y" of "n". Als de invoer niet gelijk is aan "y" of "n", dan wordt de gebruiker opnieuw gevraagd om invoer te geven met de prompt "Invalid input, please enter y or n". De loop blijft doorgaan totdat de invoer wel gelijk is aan "y" of "n".
+
+Als de invoer wel gelijk is aan "y", dan wordt de If-statement uitgevoerd. Hier wordt de Set-Content cmdlet gebruikt om de inhoud van de lijst (aangegeven met $ListFile) te wissen met de -value $null parameter.
+
+Kortom, het script vraagt de gebruiker of de lijst gewist moet worden en valideert de ingevoerde waarde. Als de gebruiker "y" invoert, wordt de lijst gewist met de Set-Content cmdlet.

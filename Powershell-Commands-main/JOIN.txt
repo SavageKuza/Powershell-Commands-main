@@ -1,0 +1,20 @@
+Maak een nieuwe database aan in phpmyadmin en noem de database persoon.
+
+We gaan nu een database en twee tabellen maken in phpmyadmin.
+
+Download het bestandje persoon.sql aan de linkerkant van deze pagina.
+Start XAMPP (Apache en MySQL).
+Kies in het linker gedeelte 'new' om een nieuwe database aan te maken.
+Maak een database met de naam persoon aan.
+Ga naar het tabje import en selecteer browse; ga naar het bestand persoon.sql en importeer deze.
+(optioneel) Als je wilt, kun je de tabellen ook handmatig aanmaken. Je moet daarvoor de volgende twee tabellen maken:
+
+persoon met de kolommen ID (integer), voornaam (varchar(80)), achternaam (varchar(80)), en stad (integer)
+stad met de kolommen ID (integer) en naam (varchar(80)).
+vul de tabellen nu met de waarden zoals hierboven aangegeven.
+Voer nu de volgende query uit:
+
+SELECT *
+FROM persoon
+JOIN stad
+ON persoon.stad = stad.id

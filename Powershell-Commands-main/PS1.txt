@@ -1,0 +1,21 @@
+# Ask for user input for server name and minutes
+
+$server = Read-Host -Prompt "Enter the server name"
+
+$minutes = Read-Host -Prompt "Enter the number of minutes"
+
+# Use the user input in the script
+
+Write-Host "The server name is: $server"
+
+Write-Host "The number of minutes is: $minutes"
+
+Dit script gebruikt de PowerShell-cmdlets Read-Host en Write-Host om interactie te hebben met de gebruiker.
+
+De eerste regel vraagt de gebruiker om invoer voor de server naam. De Read-Host cmdlet wordt gebruikt om de gebruiker om invoer te vragen, en de -Prompt parameter wordt gebruikt om de tekst "Enter the server name" weer te geven als de prompt voor de gebruiker. De gebruiker ingevoerde waarde wordt opgeslagen in de variabele $server.
+
+De tweede regel vraagt de gebruiker om invoer voor het aantal minuten. De Read-Host cmdlet wordt opnieuw gebruikt, en de -Prompt parameter wordt gebruikt om de tekst "Enter the number of minutes" weer te geven als de prompt voor de gebruiker. De gebruiker ingevoerde waarde wordt opgeslagen in de variabele $minutes.
+
+De derde en vierde regel gebruikt de Write-Host cmdlet om de ingevoerde waarden te tonen naar de gebruiker. De Write-Host cmdlet wordt gebruikt om tekst naar de console weer te geven, en de tekst die wordt weergegeven is "The server name is: $server" en "The number of minutes is: $minutes".
+
+Kortom, het script vraagt de gebruiker om invoer voor de server naam en het aantal minuten en geeft de ingevoerde waarden terug naar de gebruiker.

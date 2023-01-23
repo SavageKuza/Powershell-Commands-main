@@ -1,0 +1,41 @@
+Met de functie sum(<kolomnaam> kunnen we het totaal van die kolom berekenen. Bijvoorbeeld:
+
+SELECT sum(Population)
+FROM Country
+WHERE Continent = 'Europe'
+1
+SELECT sum(Population)
+2
+FROM Country
+3
+WHERE Continent = 'Europe'
+
+Stel je wilt weten welk land in West Europa de meeste inwoners heeft dan kun je met een query bepalen wat het grootste aantal inwoners is. Maar dan weet je nog niet welk land dit is. Dit kan in een ingewikkelde query, maar het kan ook eenvoudiger met twee queries:
+
+1
+SELECT max(Population)
+2
+FROM Country
+3
+WHERE Region = 'Western Europe'
+
+Nu kunnen we het land opzoeken:
+
+1
+SELECT *
+2
+FROM Country
+3
+WHERE Region = 'Western Europe'
+4
+and Population = 82164700
+We kunnen nu deze twee queries combineren. We vullen dan in plaats van het getal de eerste query in en gebruiken dan wel haakjes om de tweede query heen.
+
+1
+SELECT *
+2
+FROM Country
+3
+WHERE Region = 'Western Europe'
+4
+and Population = (SELECT max(Population) FROM Country WHERE Region = 'Western Europe')
